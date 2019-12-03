@@ -1,0 +1,104 @@
+{
+    "items": {
+      "i_1": {
+        "count": 1,
+        "name": "Brufen",
+        "price": 3500
+      },
+      "i_2": {
+        "count": 1,
+        "name": "Abbott",
+        "price": 3000
+      },
+      "i_3": {
+        "count": 1,
+        "name": "Doromax 200mg",
+        "price": 3000
+      },
+      "i_4": {
+        "count": 1,
+        "name": "Losartan 25 mg",
+        "price": 2000
+      },
+      "i_5": {
+        "count": 1,
+        "name": "Potriolac Gel",
+        "price": 5000
+      },
+      "i_6": {
+        "count": 1,
+        "name": "Zocor",
+        "price": 2500
+      },
+      "i_7": {
+        "count": 1,
+        "name": "Ceftezol VCP",
+        "price": 6000
+      },
+      "i_8": {
+        "count": 1,
+        "name": "Duphaston",
+        "price": 7000
+      },
+      "i_9": {
+        "count": 1,
+        "name": "Losartan",
+        "price": 8700
+      },
+      "i_10": {
+        "count": 1,
+        "name": "Fehezym",
+        "price": 9500
+      },
+      "i_11": {
+        "count": 1,
+        "name": "Docetaxel",
+        "price": 12000
+      },
+      "i_12": {
+        "count": 1,
+        "name": "Fluorouracil",
+        "price": 7500
+      },
+      "i_13": {
+        "count": 1,
+        "name": "ABAB",
+        "price": 5200
+      },
+      "i_14": {
+        "count": 1,
+        "name": "ACM",
+        "price": 8800
+      },
+      "i_15": {
+        "count": 1,
+        "name": "Abbsin",
+        "price": 5200
+      },
+      "i_16": {
+        "count": 1,
+        "name": "Abingem",
+        "price": 6500
+      }
+    },
+    "discounts": {
+      "d_1": {
+        "name": "Abilify tablets",
+        "rate": 0.08
+      },
+      "d_2": {
+        "name": "Pharmox",
+        "rate": 0.07
+      },
+      "d_3": {
+        "name": "Moprazol",
+        "rate": 0.1
+      },
+      "d_4": {
+        "name": "Opxil",
+        "rate": 0.05
+      }
+    },
+    "currency_code": "VND"
+  }
+  

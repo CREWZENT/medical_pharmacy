@@ -1,0 +1,72 @@
+.container {
+  @import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
+  background: #f1f1f1;
+  padding: 20px 10px;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "VT323", monospace;
+  color: #1f1f1f;
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 0px 20px;
+}
+
+.thank {
+  padding: 20px;
+}
+
+.address {
+  padding: 0px 0px 30px;
+}
+
+.leftTitle {
+  padding: 0px 0px 0px;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.service {
+  border-bottom: 1px solid #EEE;
+}
+
+.tabletitle {
+  justify-content: space-evenly;
+  background: #EEE;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.receipt {
+  width: 300px;
+  min-height: 100vh;
+  height: 50%;
+  background: #fff;
+  margin: 0 auto;
+  box-shadow: 5px 5px 19px #ccc;
+  padding: 10px;
+}
+
+.logo {
+  text-align: center;
+  padding: 20px;
+}
+
+.qr_code {
+  padding: 20px;
+  text-align: center;
+  display: block;
+}

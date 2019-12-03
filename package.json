@@ -1,0 +1,48 @@
+{
+  "name": "com.teneocto.medical_book_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "proxy": "http://localhost:8081",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node ./server.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17.1",
+    "firebase-admin": "8.8.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "gh-pages": "^2.0.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.4",
+    "react-confirm-alert": "^2.4.1",
+    "react-dom": "^16.8.4",
+    "react-redux": "^6.0.1",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "scss": "^0.2.4",
+    "qrcode.react": "1.0.0"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "css-loader": "^3.2.1",
+    "redux-logger": "^3.0.6",
+    "rimraf": "^2.6.3",
+    "sass": "^1.17.2",
+    "style-loader": "^1.0.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

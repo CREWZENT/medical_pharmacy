@@ -1,0 +1,49 @@
+button {
+  margin: 1em 2px;
+  border-radius: 5px;
+  padding: 0.7em 5em;
+  border: none;
+  font-size: 0.8rem;
+
+  &.p-h-3 {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  &:disabled {
+    filter: grayscale(100%);
+    cursor: not-allowed;
+  }
+
+  &.surgery {
+    background-color: #ececec;
+    color: #818181;
+
+    &:hover {
+      background-color: #8888;
+    }
+  }
+
+  &.discount {
+    background-color: #ffd94e;
+    color: #333;
+
+    &:hover {
+      background-color: #ffc800;
+    }
+  }
+
+  &.next {
+    width: 100%;
+    background: #3d8ef3;
+    color: #fff;
+
+    &.complete {
+      background: #124cf1;
+    }
+
+    &:hover {
+      background-color: #64a9ff;
+    }
+  }
+}

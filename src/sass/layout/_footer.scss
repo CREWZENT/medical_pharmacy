@@ -1,0 +1,25 @@
+footer {
+  .footer__wrapper {
+    padding: 1em;
+    border-top: 1px solid #ddd;
+    p {
+      color: #fff;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    &.select {
+      background: #188aff;
+    }
+    .total {
+      .total__text {
+        float: left;
+        font-size: 0.8em;
+        color: #888;
+      }
+      .total__price {
+        float: right;
+        font-size: 1.2em;
+      }
+    }
+  }
+}
