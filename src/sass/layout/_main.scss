@@ -72,10 +72,12 @@ main {
       }
 
       .items__wrapper__surgery--buttons {
+        margin-bottom: 10px;
         float: right;
         height: 25px;
         border: 1px solid #eee;
         border-radius: 10px;
+        align-content: center;
         select {
           border-radius: 10px 0 0 10px;
           background: #f7f6f7;
@@ -116,4 +118,35 @@ main {
       }
     }
   }
+}
+
+.schedule-surgery {
+  border-radius: 10px 10px 10px 10px;
+  border: none;
+  font-size: 0.7em;
+  background: #5a85c4;
+  color: #ffffff;
+  margin-left: 5px;
+
+  &:hover {
+    background-color: #ffedaa;
+  }
+}
+.schedule-surgery-deactive {
+  border-radius: 10px 10px 10px 10px;
+  border: none;
+  font-size: 0.7em;
+  background: #ececec;
+  color: #000000;
+  margin-left: 5px;
+
+  &:hover {
+    background-color: #ffedaa;
+  }
+}
+
+.description{
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
 }

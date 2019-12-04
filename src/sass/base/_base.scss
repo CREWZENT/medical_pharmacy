@@ -2,9 +2,14 @@ body {
   position: relative;
   background-color: #fff;
   font-family: "Nanum Gothic", sans-serif;
-  max-width: 375px;
+  max-width: 400px;
   margin: 0 auto;
   border: 1px solid #eee;
+}
+
+small {
+  font: 1em sans-serif;
+  font-size: small;
 }
 
 button {
@@ -13,6 +18,10 @@ button {
   &:focus {
     outline: none;
   }
+}
+
+text {
+  font-size: small;
 }
 
 .hide {

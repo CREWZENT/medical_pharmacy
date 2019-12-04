@@ -30,6 +30,30 @@ export const modifyCount = (key,val) => {
   }
 }
 
+export const modifyTake = (key,val) => {
+  return{
+    type:types.MODIFY_TAKE,
+    key: key,
+    val:val
+  }
+}
+
+export const modifyDescription = (key,val) => {
+  return{
+    type:types.MODIFY_DESCRIPTION,
+    key: key,
+    val:val
+  }
+}
+
+export const modifyReminder = (key, val) => {
+  return{
+    type:types.MODIFY_REMINDER,
+    key: key,
+    val:val
+  }
+}
+
 export const removeSelectedSurgery = (key) => {
   return{
     type:types.REMOVE_SELECTED_SURGERY,

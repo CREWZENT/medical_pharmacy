@@ -13,7 +13,7 @@ class App extends Component {
     if (this.props.isPurchasing) {
       return (
         <Fragment>
-          <div className={'purchase__process'}><FontAwesomeIcon icon={faSpinner} color={'#333'} spin={true} size={'3x'} /><p>Paying...</p></div>
+          <div className={'purchase__process'}><FontAwesomeIcon icon={faSpinner} color={'#333'} spin={true} size={'3x'} /><p>Processing...</p></div>
         </Fragment>
       );
     } else if (this.props.isFinished) {

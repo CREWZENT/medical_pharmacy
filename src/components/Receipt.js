@@ -7,7 +7,6 @@ var QRCode = require('qrcode.react');
 class Receipt extends Component {
 
     render() {
-        console.log(JSON.stringify(this.props));
         const listSelected = [];
         for (let i = 0; i < this.props.selectedSurgery.length; i++) {
             listSelected.push(
@@ -38,36 +37,38 @@ class Receipt extends Component {
 
                     <div className="leftTitle">
                         Date: {new Date().toLocaleString()}
-		            </div>
+                    </div>
                     <div className="address">
                         name: {this.props.userName}
-		            </div>
+                    </div>
 
                     <div id='table'>
                         <table>
-                            <tr class="tabletitle">
-                                <td class="item">
-                                    <h2>Item</h2>
-                                </td>
-                                <td class="Hours">
-                                    <h2>Qty</h2>
-                                </td>
-                                <td class="Rate">
-                                    <h2>Total</h2>
-                                </td>
-                            </tr>
+                            <tbody>
+                                <tr className="tabletitle">
+                                    <td className="item">
+                                        <h2>Item</h2>
+                                    </td>
+                                    <td className="Hours">
+                                        <h2>Qty</h2>
+                                    </td>
+                                    <td className="Rate">
+                                        <h2>Total</h2>
+                                    </td>
+                                </tr>
 
-                            {listSelected}
+                                {listSelected}
 
-                            <tr class="tabletitle">
-                                <td></td>
-                                <td class="Rate">
-                                    <h2>Total</h2>
-                                </td>
-                                <td class="payment">
-                                    <h2>{this.props.totalPrice}đ</h2>
-                                </td>
-                            </tr>
+                                <tr className="tabletitle">
+                                    <td></td>
+                                    <td className="Rate">
+                                        <h2>Total</h2>
+                                    </td>
+                                    <td className="payment">
+                                        <h2>{this.props.totalPrice}đ</h2>
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
 
                     </div>
@@ -84,7 +85,7 @@ class Receipt extends Component {
 		            </div>
 
                     <div className='qr_code'>
-                        <QRCode value="http://facebook.github.io/react/" />
+                        <QRCode value={this.props.receiptId.toString()} />
                     </div>
                 </div>
             </div>

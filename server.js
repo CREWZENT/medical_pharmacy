@@ -6,6 +6,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 const server = express();
+server.use(cors());
+server.use(bodyParser.json())
 const PORT = 8081;
 
 //************************************ Products ****************************************************/
@@ -59,6 +61,7 @@ getBillById = (id) => {
 
 
 createBill = (data) => {
+    console.log(data);
     return new Promise((resolve, reject) => {
         const billRef = db.ref().child('bills');
         billRef.set(data.id, (err) => {
@@ -75,17 +78,12 @@ createBill = (data) => {
 //************************************ REST API *********************************************/
 server.set('port', process.env.PORT || PORT);
 
-//Adding routes
-server.get('/pos', (request, response) => {
-    response.sendFile(__dirname + '/index.html');
-});
-
-server.get('/bill/:id', async (request, response) => {
-    response.status(200).send(await getBillById());
+server.get('/bill', async (request, response) => {
+    response.status(200).send(await getBillById(request.query.id));
 });
 
 server.post('/createBill', async (request, response) => {
-    response.status(200).send(await getBillById());
+    response.status(200).send(await createBill(request.body));
 });
 
 server.listen(PORT, () => {
