@@ -69,7 +69,7 @@ const mapDispatchToProps = dispatch => ({
   _handlePurchase: (props) => {
     console.log(JSON.stringify(props));
     dispatch(actions.purchase());
-    fetch('http://localhost:8081/createBill', {
+    fetch('http://api-medical.teneocto.io/createBill', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
