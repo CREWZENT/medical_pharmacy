@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 const server = express();
 server.use(cors());
 server.use(bodyParser.json())
+server.use(express.static(__dirname));
+server.use(express.static(path.join(__dirname, 'build')));
 const PORT = 8081;
 
 //************************************ Products ****************************************************/
@@ -80,6 +82,10 @@ server.set('port', process.env.PORT || PORT);
 
 server.get('/bill', async (request, response) => {
     response.status(200).send(await getBillById(request.query.id));
+});
+
+server.get('/', async (request, response) => {
+    response.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 server.post('/createBill', async (request, response) => {
