@@ -23,6 +23,7 @@ class Receipt extends Component {
                 </tr>)
             )
         }
+        const QRLink = 'http://api-medical.teneocto.io/bill?id=' + this.props.receiptId.toString();
         return (
             <div id="showScroll" className="container">
                 <div className="receipt">
@@ -85,7 +86,7 @@ class Receipt extends Component {
 		            </div>
 
                     <div className='qr_code'>
-                        <QRCode value={this.props.receiptId.toString()} />
+                        <QRCode value={QRLink} />
                     </div>
                 </div>
             </div>
