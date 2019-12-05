@@ -66,7 +66,7 @@ createBill = (data) => {
     console.log(data);
     return new Promise((resolve, reject) => {
         const billRef = db.ref().child('bills');
-        billRef.set(data.id, (err) => {
+        billRef.child(data.id).set(data.id, (err) => {
             billRef.child(data.id).set(data);
             if (err) {
                 reject(err);
