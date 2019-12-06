@@ -67,8 +67,26 @@ class Footer extends Component {
 const mapDispatchToProps = dispatch => ({
   _handleCompleteSelected: (headerType) => { dispatch(actions.completeSelected(headerType)) },
   _handlePurchase: (props) => {
-    console.log(JSON.stringify(props));
     dispatch(actions.purchase());
+    const listSurgery = [];
+    for (let i = 0; i < props.selectedSurgery.length; i++) {
+      let surgery = {};
+      surgery.dosage = props.selectedSurgery[i].count;
+      surgery.note = props.selectedSurgery[i].description;
+      surgery.name = props.selectedSurgery[i].name;
+      surgery.price = props.selectedSurgery[i].price;
+      surgery.sessions = [];
+      if (props.selectedSurgery[i].reminder.day) {
+        surgery.sessions.push('MORNING');
+      }  
+      if (props.selectedSurgery[i].reminder.night) {
+        surgery.sessions.push('EVENING');
+      }
+      surgery.totalAmount = props.selectedSurgery[i].totalCount;
+      surgery.unit = 'pill';
+      surgery.category = props.selectedSurgery[i].category;
+      listSurgery.push(surgery);
+    }
     fetch('http://api-medical.teneocto.io/createBill', {
       method: 'POST',
       headers: {
@@ -79,13 +97,13 @@ const mapDispatchToProps = dispatch => ({
         id: props.receiptId,
         customerName: props.userName,
         totalPrice: props.totalPrice,
-        listDrugs: props.selectedSurgery,
+        listDrugs: listSurgery,
         drugStore: {
           name: "Teneocto Pharma",
           address: "107 Nguyen Phong Sac, Ha Noi",
           phoneNumber: "016966996"
         },
-        date: new Date().toLocaleString()
+        date: new Date().now()
       })
     }).then(() => {
       dispatch(actions.purchaseFinished());
