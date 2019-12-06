@@ -69,6 +69,7 @@ const mapDispatchToProps = dispatch => ({
   _handlePurchase: (props) => {
     dispatch(actions.purchase());
     const listSurgery = [];
+    const date = Date.now().toString();
     for (let i = 0; i < props.selectedSurgery.length; i++) {
       let surgery = {};
       surgery.dosage = props.selectedSurgery[i].count;
@@ -76,10 +77,10 @@ const mapDispatchToProps = dispatch => ({
       surgery.name = props.selectedSurgery[i].name;
       surgery.price = props.selectedSurgery[i].price;
       surgery.sessions = [];
-      if (props.selectedSurgery[i].reminder.day) {
+      if (props.selectedSurgery[i].reminder && props.selectedSurgery[i].reminder.day) {
         surgery.sessions.push('MORNING');
       }  
-      if (props.selectedSurgery[i].reminder.night) {
+      if (props.selectedSurgery[i].reminder &&props.selectedSurgery[i].reminder.night) {
         surgery.sessions.push('EVENING');
       }
       surgery.totalAmount = props.selectedSurgery[i].totalCount;
@@ -103,7 +104,7 @@ const mapDispatchToProps = dispatch => ({
           address: "107 Nguyen Phong Sac, Ha Noi",
           phoneNumber: "016966996"
         },
-        date: new Date().now()
+        date: date
       })
     }).then(() => {
       dispatch(actions.purchaseFinished());
