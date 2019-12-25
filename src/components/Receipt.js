@@ -23,7 +23,7 @@ class Receipt extends Component {
                 </tr>)
             )
         }
-        const QRLink = 'http://api-medical.teneocto.io/bill?id=' + this.props.receiptId.toString();
+        const QRLink = 'https://api-medical.teneocto.io/bill?id=' + this.props.receiptId.toString();
         return (
             <div id="showScroll" className="container">
                 <div className="receipt">

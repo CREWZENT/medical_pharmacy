@@ -88,7 +88,7 @@ const mapDispatchToProps = dispatch => ({
       surgery.category = props.selectedSurgery[i].category;
       listSurgery.push(surgery);
     }
-    fetch('http://api-medical.teneocto.io/createBill', {
+    fetch('https://api-medical.teneocto.io/createBill', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
